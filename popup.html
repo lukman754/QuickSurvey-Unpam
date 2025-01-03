@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    :root {
+        --color-black: #000000;
+        --color-blue: #d5eaff;
+        --color-purple: #c3bafa;
+        --color-green: #c8daaa;
+        --color-yellow: #fddd9a;
+        --color-pink: #f6bdd9;
+        
+        --border-width: 2px;
+        --border-radius: 5px;
+        }
+
+    section {
+        background-color: #fff;
+        font-size: 18px;
+        font-family: "Roboto Mono";
+        }
+    .container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 50px 0;
+        margin-bottom: 20px;
+        }
+
+    img {
+        width: 100%;
+        }
+        .d-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 30px;
+        }
+
+        /* RESPONSIVE GRID */
+        @media (max-width: 680px) {
+        .container {
+            max-width: 100%;
+            padding: 0 15px;
+        }
+        .d-grid {
+            grid-template-columns: 1fr;
+        }
+        }
+
+        /********* CARD COMPONENT *********/
+        .card-brutalism {
+        border: var(--border-width) solid var(--color-black);
+        box-shadow: 8px 8px 0px 0px var(--color-black);
+        border-radius: var(--border-radius);
+        overflow: hidden;
+        }
+        .card-header {
+        min-height: 40px;
+        border-bottom: var(--border-width) solid var(--color-black);
+        }
+        .card-header h3 {
+        margin: 0;
+        padding: 10px;
+        font-weight: bold;
+        }
+        .card-img {
+        width: 100%;
+        height: 150px;
+        }
+        .card-img img {
+        object-fit: cover;
+        object-position: center;
+        width: 100%;
+        height: 100%;
+        }
+        .card-content {
+        padding: 15px;
+        }
+        .card-content p {
+        margin: 0;
+        font-size: 12px;
+        }
+
+        /******* BACKGROUND COLOR *******/
+        .bg-blue {
+        background-color: var(--color-blue);
+        }
+        .bg-green {
+        background-color: var(--color-green);
+        }
+        .bg-pink {
+        background-color: var(--color-pink);
+        }
+        .bg-purple {
+        background-color: var(--color-purple);
+        }
+        .bg-yellow {
+        background-color: var(--color-yellow);
+        }
+        /************* BTN *************/
+        .btn-link {
+        margin-top: 15px;
+        margin-bottom: 5px;
+        }
+        .btn {
+        color: var(--color-black);
+        text-decoration: none;
+        font-weight: bold;
+        width: 100%;
+        padding: 5px 15px;
+        border-radius: var(--border-radius);
+        border: 1px solid var(--color-black);
+        box-shadow: 2px 2px 0px 0px var(--color-black);
+        
+        }
+        .btn:hover {
+        border-width: 2px;
+        box-shadow: none;
+        }
+
+        .btn-link-random {
+            display: none;
+        }
+
+        body {
+        width: 300px;
+        
+        font-family: system-ui;
+        }
+
+  </style>
+</head>
+<body>
+    <div class="container">
+    <div class="d-grid">
+      <div class="card card-brutalism">
+        <div class="card-header bg-blue">
+          <h3>QuickSurvey MyUnpam</h3>
+        </div>
+        <div class="card-content">
+          <p>Pilih salah satu opsi dibawah ini untuk mengisi kuisioner {\ _/}</p>
+          <div class="btn-link">
+            <button class="btn bg-green" id="setuju">Pilih Semua Setuju</button>
+          </div>
+          <div class="btn-link">
+            <button class="btn bg-yellow" id="random">Random (Tanpa STD)</button>
+          </div>
+          <div class="btn-link-random">
+             <button class="btn bg-purple" id="fullRandom">Full Random</button>
+          </div>
+            <footer style="font-size: 9px; text-align: center; color: #888; padding: 10px;">
+            &copy; 2025 Created by <a href="https://github.com/Lukman754" target="_blank" style="color: #000000; text-decoration: none;">Lukman754</a>. All rights reserved.
+            </footer>
+
+        </div>
+      </div>
+      
+   
+    </div>
+    
+  </div>
+ 
+
+    
+  <script src="popup.js"></script>
+</body>
+</html>
