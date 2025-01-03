@@ -1,7 +1,11 @@
+
+
 # Quicksurvey-Myunpam
+Chrome extension untuk mempercepat pengisian kuisioner KHS di MyUnpam (Kartu Hasil Studi) secara otomatis.
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 
-Chrome extension untuk mempercepat pengisian kuisioner KHS di MyUnpam (Kartu Hasil Studi) secara otomatis.
+<img width="960" alt="{AF631E73-FAEC-4881-A257-5325F2DFE2CA}" src="https://github.com/user-attachments/assets/ff997a59-e48a-4ba9-b034-830dafe66a01" />
+
 
 ## Fitur
 - Pilih Semua Setuju: Memilih opsi "Setuju" untuk semua pertanyaan
