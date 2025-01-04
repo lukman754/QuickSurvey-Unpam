@@ -1,107 +1,137 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <style>
-    :root {
+  <head>
+    <script
+      src="https://kit.fontawesome.com/f59e2d85df.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      :root {
         --color-black: #000000;
         --color-blue: #d5eaff;
         --color-purple: #c3bafa;
         --color-green: #c8daaa;
         --color-yellow: #fddd9a;
         --color-pink: #f6bdd9;
-        
+        --color-red: #f56260;
+        --color-orange: #ffa264;
+        --color-lime: #b8ff82;
+        --color-teal: #00ff6a;
+
         --border-width: 2px;
         --border-radius: 5px;
-        }
+      }
 
-    section {
+      section {
         background-color: #fff;
         font-size: 18px;
         font-family: "Roboto Mono";
-        }
-    .container {
+      }
+      .container {
         max-width: 900px;
         margin: 0 auto;
         padding: 50px 0;
         margin-bottom: 20px;
-        }
+      }
 
-    img {
+      img {
         width: 100%;
-        }
-        .d-grid {
+      }
+      .d-grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 30px;
-        }
+      }
 
-        /* RESPONSIVE GRID */
-        @media (max-width: 680px) {
+      /* RESPONSIVE GRID */
+      @media (max-width: 680px) {
         .container {
-            max-width: 100%;
-            padding: 0 15px;
+          max-width: 100%;
+          padding: 0 15px;
         }
         .d-grid {
-            grid-template-columns: 1fr;
+          grid-template-columns: 1fr;
         }
-        }
+      }
 
-        /********* CARD COMPONENT *********/
-        .card-brutalism {
+      /********* CARD COMPONENT *********/
+      .card-brutalism-btn {
+        border: var(--border-width) solid var(--color-black);
+        box-shadow: 2px 2px 0px 0px var(--color-black);
+        border-radius: var(--border-radius);
+        overflow: hidden;
+        padding: 10px;
+        margin-top: 10px;
+      }
+
+      .card-brutalism {
         border: var(--border-width) solid var(--color-black);
         box-shadow: 8px 8px 0px 0px var(--color-black);
         border-radius: var(--border-radius);
         overflow: hidden;
-        }
-        .card-header {
+      }
+      .card-header {
         min-height: 40px;
         border-bottom: var(--border-width) solid var(--color-black);
-        }
-        .card-header h3 {
+      }
+      .card-header h3 {
         margin: 0;
         padding: 10px;
         font-weight: bold;
-        }
-        .card-img {
+      }
+      .card-img {
         width: 100%;
         height: 150px;
-        }
-        .card-img img {
+      }
+      .card-img img {
         object-fit: cover;
         object-position: center;
         width: 100%;
         height: 100%;
-        }
-        .card-content {
+      }
+      .card-content {
         padding: 15px;
-        }
-        .card-content p {
+      }
+      .card-content p {
         margin: 0;
         font-size: 12px;
-        }
+      }
 
-        /******* BACKGROUND COLOR *******/
-        .bg-blue {
+      /******* BACKGROUND COLOR *******/
+      .bg-blue {
         background-color: var(--color-blue);
-        }
-        .bg-green {
+      }
+      .bg-green {
         background-color: var(--color-green);
-        }
-        .bg-pink {
+      }
+      .bg-pink {
         background-color: var(--color-pink);
-        }
-        .bg-purple {
+      }
+      .bg-purple {
         background-color: var(--color-purple);
-        }
-        .bg-yellow {
+      }
+      .bg-yellow {
         background-color: var(--color-yellow);
-        }
-        /************* BTN *************/
-        .btn-link {
-        margin-top: 15px;
+      }
+      .bg-red {
+        background-color: var(--color-red);
+      }
+      .bg-orange {
+        background-color: var(--color-orange);
+      }
+      .bg-lime {
+        background-color: var(--color-lime);
+      }
+      .bg-teal {
+        background-color: var(--color-teal);
+      }
+
+      /************* BTN *************/
+      .btn-link {
+        margin-top: 8px;
         margin-bottom: 5px;
-        }
-        .btn {
+      }
+      .btn {
         color: var(--color-black);
         text-decoration: none;
         font-weight: bold;
@@ -110,57 +140,110 @@
         border-radius: var(--border-radius);
         border: 1px solid var(--color-black);
         box-shadow: 2px 2px 0px 0px var(--color-black);
-        
-        }
-        .btn:hover {
+      }
+      .btn:hover {
         border-width: 2px;
         box-shadow: none;
-        }
+      }
 
-        .btn-link-random {
-            display: none;
-        }
+      .btn-link-random {
+        display: none;
+      }
 
-        body {
-        width: 300px;
-        
+      .star-rating-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        margin-top: 10px;
+      }
+
+      .star-rating-buttons button {
+        width: 100%;
+      }
+
+      button .fa-solid {
+        color: rgb(255, 196, 0);
+      }
+
+      body {
+        width: 400px;
+
         font-family: system-ui;
-        }
-
-  </style>
-</head>
-<body>
+      }
+    </style>
+  </head>
+  <body>
     <div class="container">
-    <div class="d-grid">
-      <div class="card card-brutalism">
-        <div class="card-header bg-blue">
-          <h3>QuickSurvey MyUnpam</h3>
-        </div>
-        <div class="card-content">
-          <p>Pilih salah satu opsi dibawah ini untuk mengisi kuisioner {\ _/}</p>
-          <div class="btn-link">
-            <button class="btn bg-green" id="setuju">Pilih Semua Setuju</button>
+      <div class="d-grid">
+        <div class="card card-brutalism">
+          <div class="card-header bg-blue">
+            <h3>QuickSurvey MyUnpam</h3>
           </div>
-          <div class="btn-link">
-            <button class="btn bg-yellow" id="random">Random (Tanpa STD)</button>
-          </div>
-          <div class="btn-link-random">
-             <button class="btn bg-purple" id="fullRandom">Full Random</button>
-          </div>
-            <footer style="font-size: 9px; text-align: center; color: #888; padding: 10px;">
-            &copy; 2025 Created by <a href="https://github.com/Lukman754" target="_blank" style="color: #000000; text-decoration: none;">Lukman754</a>. All rights reserved.
-            </footer>
+          <div class="card-content">
+            <p>
+              Pilih salah satu opsi dibawah ini untuk mengisi kuisioner {\ _/}
+            </p>
+            <div class="card">
+              <div class="card-brutalism-btn">
+                <p>
+                  Bagaimana penilaian kamu terhadap kinerja dosen? Pilih rating
+                  yang sesuai!
+                </p>
+                <div class="star-rating-buttons">
+                  <button class="btn bg-red" id="star1">Bintang 1</button>
+                  <button class="btn bg-orange" id="star2">Bintang 2</button>
+                  <button class="btn bg-yellow" id="star3">Bintang 3</button>
+                  <button class="btn bg-lime" id="star4">Bintang 4</button>
+                  <button class="btn bg-teal" id="star5">Bintang 5</button>
+                </div>
+              </div>
+            </div>
 
+            <div class="card">
+              <div class="card-brutalism-btn">
+                <p>
+                  Bingung memberikan penilaian? Gunakan opsi berikut untuk
+                  membantu kamu memilih!
+                </p>
+                <div class="btn-link">
+                  <button class="btn bg-green" id="setuju">
+                    Pilih Semua "Setuju"
+                  </button>
+                </div>
+                <div class="btn-link">
+                  <button class="btn bg-yellow" id="random">
+                    Random (Tanpa "Sangat Tidak Setuju")
+                  </button>
+                </div>
+                <div class="btn-link-random">
+                  <button class="btn bg-purple" id="fullRandom">
+                    Acak Total
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <footer
+              style="
+                font-size: 9px;
+                text-align: center;
+                color: #888;
+                padding: 10px;
+              "
+            >
+              &copy; 2025 Created by
+              <a
+                href="https://github.com/Lukman754"
+                target="_blank"
+                style="color: #000000; text-decoration: none"
+                >Lukman754</a
+              >. All rights reserved.
+            </footer>
+          </div>
         </div>
       </div>
-      
-   
     </div>
-    
-  </div>
- 
 
-    
-  <script src="popup.js"></script>
-</body>
+    <script src="popup.js"></script>
+  </body>
 </html>
