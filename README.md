@@ -5,7 +5,8 @@ Chrome extension untuk mempercepat pengisian kuisioner KHS di MyUnpam (Kartu Has
 
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 
-<img width="960" alt="{AF631E73-FAEC-4881-A257-5325F2DFE2CA}" src="https://github.com/user-attachments/assets/ff997a59-e48a-4ba9-b034-830dafe66a01" />
+![image](https://github.com/user-attachments/assets/61b82de1-09c0-45bc-8196-3813c6c939af)
+
 
 
 ## Fitur
