@@ -8,6 +8,7 @@ Chrome extension untuk mempercepat pengisian kuisioner KHS di MyUnpam (Kartu Has
 
 
 ## Fitur
+- Memilih rating bintang 1-5
 - Pilih Semua Setuju: Memilih opsi "Setuju" untuk semua pertanyaan
 - Random (Tanpa STD): Memilih secara acak tanpa opsi "Sangat Tidak Setuju"
 
